@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro exemplo com VueJs</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Primeiro exemplo com VueJs Blog</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -29,10 +29,10 @@
             <div class="container">
                 <div class="row posts"> 
                     <div class="col-4" v-for="post in posts">
-                        <img class="img-fluid" :src="post.img" :alt="post.title">
+                        <img class="img-fluid" v-bind:src="post.img" v-bind:alt="post.title">
                         <h2>{{post.title}}</h2>
                         <p>
-                            {{post.post}}
+                            {{post.post | truncate(200)}}
                         </p>
                     </div>
                 </div>
@@ -44,7 +44,8 @@
     </div>
  
     <!-- NPM VUE -->
-    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/vue2-filters/dist/vue2-filters.min.js"></script>
     <script>
         let app = new Vue({
             el: '#app',
