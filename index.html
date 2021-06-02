@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro exemplo com vue</title>
+    <title>Primeiro exemplo com VueJs</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
 
     <div id="app">
-        {{message}}
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <a href="#" class="text-center logo">
+                        <img src="assets/img/logomarca.png" alt="Ubatuba Times">
+                    </a>
+                    <a href="#" class="bg-primary login text-white">Fazer login</a>
+                </nav>
+            </div>
+        </header>  
+        <section class="posts">
+            <div class="container">
+                <div class="row"></div>
+            </div>
+        </section>  
+        <footer>
+            <p class="text-center text-muted">Visite: <a target="_blank" href="https://informaticalivre.com">Informática Livre</a></p>
+        </footer>    
     </div>
  
     <!-- NPM VUE -->
     <script src="node_modules/vue/dist/vue.js"></script>
     <script>
-        new Vue({
+        let app = new Vue({
             el: '#app',
             data: {
                 message: 'Primeiro exemplo 1'
