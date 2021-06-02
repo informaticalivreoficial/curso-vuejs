@@ -16,16 +16,64 @@
                     <a href="#" class="text-center logo">
                         <img src="assets/img/logomarca.png" alt="Ubatuba Times">
                     </a>
-                    <a href="#" class="bg-primary login text-white">Fazer login</a>
+
+                    <div v-if="isLogged" key="logged">
+                        <h4>Seja bem vindo {{ username }}</h4>
+                        <a v-on:click.prevent="toggleLogin" class="p-2 bg-danger logout text-white" href="#">Fazer logout</a>
+                    </div>
+                    <a v-on:click.prevent="toggleLogin" class="p-2 bg-primary login text-white" href="#" v-else key="notLogged">Fazer login</a>
                 </nav>
             </div>
         </header>  
-        <section class="posts">
+        <section class="posts pt-4 pb-4">
             <div class="container">
-                <div class="row"></div>
+                <div class="row posts">
+                    <div class="col-4">
+                        <img class="img-fluid" src="assets/img/mussum.jpg" alt="Mussum Ipsum">
+                        <h2>Mussum Ipsum</h2>
+                        <p>
+                            Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
+                            que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
+                            Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
+                            deitado sem dormir, sentado sem cochilar e fazendo pose.
+                            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+                            Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
+                            In elementis mé pra quem é amistosis quis leo. Sapien in monti 
+                            palavris qui num significa nadis i pareci latim.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="assets/img/mussum.jpg" alt="Mussum Ipsum">
+                        <h2>Mussum Ipsum</h2>
+                        <p>
+                            Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
+                            que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
+                            Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
+                            deitado sem dormir, sentado sem cochilar e fazendo pose.
+                            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+                            Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
+                            In elementis mé pra quem é amistosis quis leo. Sapien in monti 
+                            palavris qui num significa nadis i pareci latim.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" src="assets/img/mussum.jpg" alt="Mussum Ipsum">
+                        <h2>Mussum Ipsum</h2>
+                        <p>
+                            Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
+                            que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
+                            Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
+                            deitado sem dormir, sentado sem cochilar e fazendo pose.
+                            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+                            Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
+                            In elementis mé pra quem é amistosis quis leo. Sapien in monti 
+                            palavris qui num significa nadis i pareci latim.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>  
-        <footer>
+        <footer class="p-4">
             <p class="text-center text-muted">Visite: <a target="_blank" href="https://informaticalivre.com">Informática Livre</a></p>
         </footer>    
     </div>
@@ -36,7 +84,13 @@
         let app = new Vue({
             el: '#app',
             data: {
-                message: 'Primeiro exemplo 1'
+                isLogged: false,
+                username: 'Mussum Forevis'
+            },
+            methods:{
+                toggleLogin: function(){
+                    this.isLogged = !this.isLogged;
+                }
             }
         })
     </script>
