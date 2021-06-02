@@ -27,47 +27,12 @@
         </header>  
         <section class="posts pt-4 pb-4">
             <div class="container">
-                <div class="row posts">
-                    <div class="col-4">
-                        <img class="img-fluid" src="assets/img/mussum.jpg" alt="Mussum Ipsum">
-                        <h2>Mussum Ipsum</h2>
+                <div class="row posts"> 
+                    <div class="col-4" v-for="post in posts">
+                        <img class="img-fluid" :src="post.img" :alt="post.title">
+                        <h2>{{post.title}}</h2>
                         <p>
-                            Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
-                            que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
-                            Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
-                            deitado sem dormir, sentado sem cochilar e fazendo pose.
-                            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
-                            Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
-                            In elementis mé pra quem é amistosis quis leo. Sapien in monti 
-                            palavris qui num significa nadis i pareci latim.
-                        </p>
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid" src="assets/img/mussum.jpg" alt="Mussum Ipsum">
-                        <h2>Mussum Ipsum</h2>
-                        <p>
-                            Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
-                            que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
-                            Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
-                            deitado sem dormir, sentado sem cochilar e fazendo pose.
-                            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
-                            Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
-                            In elementis mé pra quem é amistosis quis leo. Sapien in monti 
-                            palavris qui num significa nadis i pareci latim.
-                        </p>
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid" src="assets/img/mussum.jpg" alt="Mussum Ipsum">
-                        <h2>Mussum Ipsum</h2>
-                        <p>
-                            Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
-                            que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
-                            Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
-                            deitado sem dormir, sentado sem cochilar e fazendo pose.
-                            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
-                            Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
-                            In elementis mé pra quem é amistosis quis leo. Sapien in monti 
-                            palavris qui num significa nadis i pareci latim.
+                            {{post.post}}
                         </p>
                     </div>
                 </div>
@@ -85,7 +50,49 @@
             el: '#app',
             data: {
                 isLogged: false,
-                username: 'Mussum Forevis'
+                username: 'Mussum Forevis',
+                posts:[{
+                    img: 'assets/img/mussum.jpg',
+                    title: 'Mussum Ipsum 1',
+                    post: `
+                    Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
+                    que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
+                    Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
+                    deitado sem dormir, sentado sem cochilar e fazendo pose.
+                    Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+                    Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
+                    In elementis mé pra quem é amistosis quis leo. Sapien in monti 
+                    palavris qui num significa nadis i pareci latim.
+                    `
+                },
+                {
+                    img: 'assets/img/mussum.jpg',
+                    title: 'Mussum Ipsum 2',
+                    post: `
+                    Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
+                    que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
+                    Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
+                    deitado sem dormir, sentado sem cochilar e fazendo pose.
+                    Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+                    Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
+                    In elementis mé pra quem é amistosis quis leo. Sapien in monti 
+                    palavris qui num significa nadis i pareci latim.
+                    `
+                },
+                {
+                    img: 'assets/img/mussum.jpg',
+                    title: 'Mussum Ipsum 3',
+                    post: `
+                    Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mim 
+                    que vai caçá sua turmis! Casamentiss faiz malandris se pirulitá. 
+                    Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, 
+                    deitado sem dormir, sentado sem cochilar e fazendo pose.
+                    Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+                    Sed non consequat odio. Atirei o pau no gatis, per gatis num morreus. 
+                    In elementis mé pra quem é amistosis quis leo. Sapien in monti 
+                    palavris qui num significa nadis i pareci latim.
+                    `
+                }]
             },
             methods:{
                 toggleLogin: function(){

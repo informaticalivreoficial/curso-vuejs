@@ -1,0 +1,24 @@
+{
+  "name": "blogvue",
+  "version": "1.0.0",
+  "description": "> Um pequeno repositório sobre um curso de VueJs que participei.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/informaticalivreoficial/curso-vuejs.git"
+  },
+  "author": "Renato Montanari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/informaticalivreoficial/curso-vuejs/issues"
+  },
+  "homepage": "https://github.com/informaticalivreoficial/curso-vuejs#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "vue": "^2.6.13",
+    "vue2-filters": "^0.12.0"
+  }
+}
